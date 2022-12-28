@@ -1,0 +1,35 @@
+footer {
+  align-self: center;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--contraste);
+  padding: $Espacamento;
+
+  > span {
+    color: var(--secundaria);
+  }
+
+  > a {
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+
+    color: var(--contraste);
+    font-weight: 600;
+
+    outline: 0.125rem solid transparent;
+
+    transition: background-color 200ms ease-out, color 150ms ease-out,
+      outline-color 200ms ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--primaria-hover);
+      color: var(--contraste-alto);
+    }
+
+    &:focus-visible {
+      outline-color: var(--primaria-hover-border);
+    }
+  }
+}

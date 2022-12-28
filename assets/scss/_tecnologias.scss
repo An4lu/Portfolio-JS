@@ -1,0 +1,40 @@
+.tecnologias {
+  @include card;
+
+  display: flex;
+  flex-direction: column;
+  gap: $Espacamento;
+
+  padding: $Espacamento * 1.5 $Espacamento;
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $Espacamento / 2;
+
+    margin: 0;
+    padding: 0;
+
+    padding: 0 $Espacamento / 2;
+
+    li {
+      list-style: none;
+
+      padding: 0 $Espacamento / 2;
+      border-radius: 1.5rem;
+      background-color: var(--secundaria);
+
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+      height: 1.5rem;
+      font-weight: 700;
+      color: var(--secundaria-contraste-alto);
+    }
+  }
+}

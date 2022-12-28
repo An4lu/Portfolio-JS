@@ -1,0 +1,61 @@
+@import "base";
+@import "perfil";
+@import "info";
+@import "tecnologias";
+@import "experiencia";
+@import "educacao";
+@import "projetos";
+@import "footer";
+
+body {
+  width: 91%;
+  max-width: $telaGigante;
+  margin: 0 auto;
+
+  @media screen and (max-width: $telaGigante) {
+    max-width: $telaGrande;
+  }
+
+  @media screen and (max-width: $telaGrande) {
+    max-width: $telaMedia;
+  }
+
+  @media screen and (max-width: $telaMedia) {
+    max-width: $telaPequena;
+  }
+
+  > main {
+    display: flex;
+    gap: $Espacamento * 2;
+
+    padding: $Espacamento;
+
+    @media screen and (max-width: $telaMedia) {
+      flex-direction: column;
+      gap: $Espacamento;
+    }
+
+    > aside {
+      display: flex;
+      flex-direction: column;
+      gap: $Espacamento * 1.5;
+
+      width: 21.75rem;
+
+      @media screen and (max-width: $telaMedia) {
+        width: unset;
+        gap: $Espacamento;
+      }
+    }
+
+    > section {
+      display: flex;
+      flex-direction: column;
+      gap: $Espacamento;
+
+      @media screen and (max-width: $telaMedia) {
+        gap: $Espacamento;
+      }
+    }
+  }
+}

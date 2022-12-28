@@ -1,0 +1,37 @@
+.info {
+  @include card;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: $Espacamento 0;
+  
+
+  > .info__item {
+
+
+    display: flex;
+    align-items: center;
+    gap: $Espacamento;
+
+    padding: 0.25rem 2rem;
+
+    color: var(--contraste-alto);
+    stroke: var(--contraste);
+
+    &:is(a) {
+      outline: 0.125rem solid transparent;
+
+      transition: background-color 200ms ease-out, outline-color 200ms ease-out;
+
+      &:hover,
+      &:focus {
+        background-color: var(--primaria-hover);
+      }
+
+      &:focus-visible {
+        outline-color: var(--primaria-hover-border);
+      }
+    }
+  }
+}

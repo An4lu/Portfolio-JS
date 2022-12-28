@@ -1,0 +1,204 @@
+.projetos {
+  @include card;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $Espacamento;
+
+  padding-left: $Espacamento * 1.5;
+  padding-right: $Espacamento * 1.5;
+
+  > strong {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: $Radius;
+    padding: 0 $Espacamento;
+
+    margin-right: -$Espacamento / 8;
+
+    height: 2rem;
+
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: var(--contraste);
+    text-decoration: none;
+
+    outline: 0.125rem solid transparent;
+
+    transition: background-color 150ms ease-out, color 150ms ease-out,
+      outline-color 150ms ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--primaria-hover);
+      color: var(--contraste-alto);
+    }
+
+    &:focus-visible {
+      outline-color: var(--primaria-hover-border);
+    }
+  }
+}
+
+.projetos__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $Espacamento;
+
+  @media screen and (max-width: $telaGrande) {
+    grid-template-columns: 1fr;
+  }
+
+  > a {
+    @include card;
+
+    text-decoration: none;
+    padding: 0;
+    text-align: start;
+
+    outline: 0.125rem solid transparent;
+
+    transition: outline-color 150ms ease-out;
+
+    &:hover,
+    &:focus {
+      > div {
+        background-color: var(--primaria-hover);
+      }
+    }
+
+    &:focus-visible {
+      outline-color: var(--primaria-hover-border);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      gap: $Espacamento;
+
+      padding: $Espacamento * 1.5;
+
+      color: var(--contraste-alto);
+      stroke: var(--contraste-alto);
+
+      border-radius: inherit;
+
+      transition: background-color 150ms ease-out;
+
+      > h3 {
+        display: flex;
+        align-items: center;
+        gap: $Espacamento / 2;
+
+        > strong {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      > p {
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+
+        color: var(--contraste);
+      }
+
+      > .infos {
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $Espacamento;
+
+        color: var(--contraste);
+        stroke: var(--contraste);
+
+        > .info {
+          display: flex;
+          align-items: center;
+          gap: $Espacamento;
+          flex-direction: row;
+          box-shadow: none;
+          list-style-type: none;
+          text-decoration: none;
+          background: none;
+          border: none;
+          
+          > div {
+
+            display: flex;
+            align-items: center;
+            gap: $Espacamento / 2;
+
+            > span {
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              font-weight: 400;
+            }
+          }
+        }
+
+        > .linguagem {
+          display: flex;
+          align-items: center;
+          gap: $Espacamento / 2;
+
+          > .dot {
+            $size: 0.5rem;
+
+            width: $size;
+            height: $size;
+            border-radius: $size;
+            border: 0.125rem solid var(--contraste);
+
+            &.javascript {
+              background-color: #2b7489;
+              border: 0.125rem solid #837E9F;
+            }
+            &.html {
+              background-color: #E54C21;
+              border: 0.125rem solid #837E9F;
+            }
+            &.css {
+              background-color: #0096DC;
+              border: 0.125rem solid #837E9F;
+            }
+            &.java {
+              background-color: #E72E2C;
+              border: 0.125rem solid #837E9F;
+            }
+            &.cplus {
+              background-color: #004283;
+              border: 0.125rem solid #837E9F;
+            }
+            &.csharp {
+              background-color: #803789;
+              border: 0.125rem solid #837E9F;
+            }
+            &.php {
+              background-color: #F9F9F9;
+              border: 0.125rem solid #837E9F;
+            }
+          }
+
+          > span {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

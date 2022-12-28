@@ -1,0 +1,54 @@
+:root {
+  --background: rgb(22, 22, 25);
+  --primaria: rgb(35, 35, 38);
+  --primaria-hover: rgb(41, 40, 44);
+  --primaria-hover-border: rgb(81, 79, 87);
+  --contraste: rgb(161, 159, 166);
+  --contraste-alto: rgb(237, 237, 239);
+  --secundaria: rgb(186, 74, 186);
+  --secundaria-contraste-alto: rgb(252, 236, 249);
+}
+
+html {
+  cursor: url(../svg/cursor/cursor.svg), auto;
+  background-color: var(--background);
+  color: var(--contraste-alto);
+}
+
+a {
+  cursor: url(../svg/cursor/cursor-pointer.svg), auto;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+$Radius: 1.25rem;
+$Espacamento: 1.25rem;
+
+$telaPequena: 45rem;
+$telaMedia: 61.625rem;
+$telaGrande: 75rem;
+$telaGigante: 85.5rem;
+
+@mixin card {
+  padding: $Espacamento;
+  background-color: var(--primaria);
+  box-shadow: 0.125rem 0.125rem 0.125rem 0.063rem rgba(0, 0, 0, 0.09);
+  border-radius: $Radius;
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(33, 33, 36);
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secundaria);
+  border-radius: 1.25rem;
+}
